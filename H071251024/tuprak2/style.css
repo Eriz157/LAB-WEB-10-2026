@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c2c2c;
+    background-color: #f5f2eb;
+}
+
+h1, h2 {
+    color: #2f4a2f;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #cfd8c9;
+    margin: 0;
+}
+
+img {
+    border-radius: 8px;
+    /* BOX MODEL: border + padding + margin pada elemen gambar */
+    border: 3px solid #4a6b4a;
+    padding: 4px;
+    margin: 10px;
+    background-color: #fff;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ---------- 6. PSEUDO-CLASS :hover ---------- */
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th, td {
+    /* BOX MODEL pada sel tabel */
+    padding: 12px;
+    border: 1px solid #b7c3ae;
+    text-align: left;
+}
+
+th {
+    background-color: #4a6b4a;
+    color: #fff;
+}
+
+tr:nth-child(even) td {
+    background-color: #f0f4ec;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 14px;
+    border: 1px solid #b7c3ae;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a6b4a;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* PSEUDO-CLASS tambahan */
+button:hover {
+    background-color: #365236;
+}
+
+button[type="reset"] {
+    background-color: #a5a5a5;
+}
+
+button[type="reset"]:hover {
+    background-color: #7d7d7d;
+}
+
+iframe {
+    border: 3px solid #4a6b4a;
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+/* ---------- 2. ID SELECTOR (per-section styling) ---------- */
+#tentang {
+    background-color: #e9f0e3;
+}
+
+#galeri {
+    background-color: #ffffff;
+}
+
+#Aktivitas {
+    background-color: #e9f0e3;
+}
+
+#lokasi {
+    background-color: #ffffff;
+}
+
+#paket {
+    background-color: #e9f0e3;
+}
+
+#kontak {
+    background-color: #ffffff;
+}
+
+#multimedia {
+    background-color: #e9f0e3;
+    text-align: center;
+}
+
+/* ---------- 3. CLASS SELECTOR (layout containers) ---------- */
+.site-header {
+    background: linear-gradient(135deg, #4a6b4a, #2f4a2f);
+    color: #fff;
+    text-align: center;
+    /* BOX MODEL */
+    padding: 40px 20px;
+    margin-bottom: 0;
+}
+
+.site-header p {
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.site-nav {
+    background-color: #2f4a2f;
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.site-nav li {
+    /* BOX MODEL */
+    margin: 0;
+}
+
+.site-nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 18px;
+    transition: background-color 0.3s ease;
+}
+
+.site-nav a:hover {
+    background-color: #4a6b4a;
+}
+
+.content-section {
+    /* BOX MODEL: padding + margin pada setiap section */
+    padding: 40px 8%;
+    margin: 0;
+}
+
+.content-section h2 {
+    margin-bottom: 15px;
+    border-left: 5px solid #c3e7c3;
+    padding-left: 12px;
+}
+
+/* ---------- 5. FLEXBOX / GRID LAYOUT ---------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.activity-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    list-style-position: inside;
+}
+
+.activity-list li {
+    background-color: #fff;
+    border: 1px solid #b7c3ae;
+    border-radius: 6px;
+    padding: 12px 16px;
+}
+
+.location-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: #fff;
+    border: 1px solid #b7c3ae;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    background-color: #fff;
+    border: 1px solid #b7c3ae;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.site-footer {
+    text-align: center;
+    background-color: #2f4a2f;
+    color: #fff;
+    padding: 20px;
+}
+
+/* ---------- 7. RESPONSIVE DESIGN DENGAN @media ---------- */
+@media (max-width: 768px) {
+    .site-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-list {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section {
+        padding: 25px 5%;
+    }
+
+    .site-header h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 25px 15px;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    button {
+        margin-right: 0;
+    }
+}
